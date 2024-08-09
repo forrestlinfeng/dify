@@ -200,6 +200,9 @@ services:
     volumes:
       # Mount the storage directory to the container, for storing user files.
       - ./volumes/app/storage:/app/api/storage
+      - ../api/core/models:/app/api/models
+      - ../api/migrations/versions:/app/api/migrations/versions
+      - ../api/core/tools/provider/builtin:/app/api/tools/provider/builtin
     networks:
       - ssrf_proxy_network
       - default
@@ -220,6 +223,9 @@ services:
     volumes:
       # Mount the storage directory to the container, for storing user files.
       - ./volumes/app/storage:/app/api/storage
+      - ../api/core/models:/app/api/models
+      - ../api/migrations/versions:/app/api/migrations/versions
+      - ../api/core/tools/provider/builtin:/app/api/tools/provider/builtin
     networks:
       - ssrf_proxy_network
       - default
